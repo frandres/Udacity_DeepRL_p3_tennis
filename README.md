@@ -10,13 +10,10 @@ In this environment, two agents control rackets to bounce a ball over a net. If 
 
 The observation space consists of 8 variables corresponding to the position and velocity of the ball and racket. Each agent receives its own, local observation. Two continuous actions are available, corresponding to movement toward (or away from) the net, and jumping.
 
-The task is episodic, and in order to solve the environment, your agents must get an average score of +0.5 (over 100 consecutive episodes, after taking the maximum over both agents). Specifically,
+The task is episodic, and in order to solve the environment, the agents must get an average score of +0.5 (over 100 consecutive episodes, after taking the maximum over both agents). Specifically, after each episode, we add up the rewards that each agent received (without discounting), to get a score for each agent. This yields 2 (potentially different) scores. We then take the maximum of these 2 scores.
+This yields a single score for each episode. The environment is considered solved, when the average (over 100 episodes) of those scores is at least +0.5.
 
-After each episode, we add up the rewards that each agent received (without discounting), to get a score for each agent. This yields 2 (potentially different) scores. We then take the maximum of these 2 scores.
-This yields a single score for each episode.
-The environment is considered solved, when the average (over 100 episodes) of those scores is at least +0.5.
-
-In this project I solve the first version of the task (single agent). In this case, the task is episodic, and in order to solve the environment,  the agent must get an average score of +30 over 100 consecutive episodes.
+In this project I implemented a DDPG agent that learns how to solve the task by self-play. You can find more details in the Report.ipynb file.
 
 ### Setup
 
@@ -68,9 +65,9 @@ python -m ipykernel install --user --name drlnd --display-name "drlnd"
 
 ## Instructions for training agents.
 
-You can use the AgentTrainer class in /trainer for training an agent with some hyperparameters. Please refer to the notebook Continuous_Control for an example of how to train it.
+You can use the AgentTrainer class in /trainer for training an agent with some hyperparameters. Please refer to the notebook Tennis for an example of how to train it.
 
-The agent's weights will be stored in /weights. The agent's learning store (scores) will be stored in /results.
+The agent's weights will be stored in the root of the repository, along with the agent's learning store (scores).
 
 ## Project results 
 
