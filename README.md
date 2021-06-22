@@ -65,7 +65,7 @@ python -m ipykernel install --user --name drlnd --display-name "drlnd"
 
 ## Instructions for training agents.
 
-You can use the AgentTrainer class in /trainer for training an agent with some hyperparameters. Please refer to the notebook Tennis for an example of how to train it.
+You can use the AgentTrainer class in /trainer for training an agent with some hyperparameters. Please refer to the notebook `Tennis-train.ipynb` for an example of how to train it.
 
 The agent's weights will be stored in the root of the repository, along with the agent's learning store (scores).
 
